@@ -1,0 +1,358 @@
+/*Fuentes*/
+@font-face{
+    font-family: "nevis";
+    src: url("fonts/nevis.eot");
+    src: url("fonts/nevis.eot?#iefix") format("embedded-opentype"),
+        url("fonts/nevis.woff") format("woff"),
+        url("fonts/nevis.ttf") format("truetype"),
+        url("fonts/nevis.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face{
+    font-family: "fjalla";
+    src: url("fonts/FjallaOne-Regular.ttf") format("Truetype");
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*Estilos generales*/
+*{
+    margin: 0px;
+    padding: 0px;
+    
+     
+}
+body{
+    background-image: url("../img/paven.png");
+}
+a{
+    text-decoration: none;
+    color: #71B053;
+}
+a:visited{
+   
+    color: #71B053;
+}
+a:hover{
+    
+    color: #285626;
+}
+.red{
+    color:#9B2422 !important;
+}
+.blue{
+    
+    color:#0C73F2 !important;
+}
+/*Formularios*/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select{
+    
+    border: 1px solid #C9C9C9;
+    box-shadow: 0px 0px 2px #cccccc inset;
+    padding: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus{
+    border: 1px solid #71B053;
+    color: black;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button{
+    
+    display: block;
+    padding: 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background-color: #71B053;
+    border-radius: 2px;
+    border: 1px solid gray;
+    color: white;
+    cursor: pointer;
+}
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button{
+  box-shadow: 0px 0px 6px gray;
+}
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+button{
+    box-shadow: 0px 0px 6px gray inset;
+    text-shadow: 0px 0px 1px gray inset;
+}
+/*Cabecera*/
+#header{
+    min-width: 1024px;
+    width: 100%;
+    height: 250px;
+    margin: 0px auto;
+    
+}
+#header a{
+    text-decoration: none;
+}
+#header #logotipo{
+    width: 770px;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+#header #logotipo img{
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+    width: 140px;
+}
+#header h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: "nevis";
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    text-shadow: 0px 2px 1px #333333;
+    transition: 300ms;
+}
+#header h1:hover{
+    text-shadow: 0px 2px 1px #333333, 0px 0px 4px #71B053;
+}
+#header h1 a{
+    color: #71B053;
+
+}
+/*BARRA DE NAVEGACIÖN*/
+#nav{
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    height: 40px;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+}
+#nav ul{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    width: 1090px;
+    
+
+}
+#nav > ul > li{
+    line-height: 40px;
+    float: left;
+    border-right: 1px solid gray;
+    transition: 300ms;
+
+}
+#nav > ul > li a{
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 40px;
+    color: white;
+    text-decoration: none;
+}
+#nav > ul > li > a:first-child{
+    border-left: 1px solid gray;
+}
+#nav ul > li:hover{
+    background-color:  #71B053;
+    box-shadow: 0px 0px 4px green inset;
+}
+/*MENU DESPLEGABLE*/
+#nav > ul > li > ul{
+    display: none;
+    position: absolute;
+    text-align: left;
+    width: 160px;
+    box-shadow: 0px 2 px 2px gray;
+    z-index: 1;
+}
+#nav > ul > li:hover > ul{
+    display: block;
+    background-color: #71B053;
+}
+/*Contenido*/
+#content{
+    width: 1250px;
+    min-height: 1100px;
+    margin: 0px auto;
+}
+/*Barra lateral*/
+#aside,
+#frase{
+    
+    width: 200px;
+    float: left; 
+    margin: 30px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    box-shadow: 0px 2px 2px #cccccc;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
+    
+}
+#frase{
+    width: 200px;
+    
+}
+
+#aside .widget{
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 14px;
+    border-bottom: 1px dashed #333333;
+
+}
+#aside .widget:last-child{
+    margin-bottom: 20px;
+
+}
+#aside h3{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #333333;
+    padding-bottom: 2px;
+    background-color: #F2F3F2;
+    border: 1px solid #cccccc;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 15px;
+
+}
+/*FORMULARIOS BARRA LATERAL*/
+#aside div label,
+#aside div input[type="text"],
+#aside div input[type="email"],
+#aside div input[type="passford"],
+#aside div a{
+    display: block;
+    width: 95%;
+    margin-bottom: 2px;
+    margin-top: 2px;
+
+}
+#aside div input[type="button"],
+#aside div input[type="submit"],
+#aside div button{
+    
+    
+    margin-bottom: 10px;
+    margin-top: 5px;
+    
+}
+#aside input,
+#aside label{
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+}
+#aside li{
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    list-style: square;
+}
+/*SECCIONES*/
+#sections{
+    
+    margin-top: 50px;
+    float: left;
+    width: 75%;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+    
+    
+}
+#frontend,
+#backend,
+#instructor{
+    margin-bottom: 40px;
+    border: 1px solid #cccccc;
+}
+.article{
+    display: block;
+    margin: 20px;
+    
+    
+}
+.titulo{
+    text-decoration: none;
+    border-bottom: 1px solid #cccccc;
+    text-align: center;
+    font-family: "fjalla", sans-serif,Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+}
+#sections section{
+    overflow: hidden;
+    color: #333333;
+
+}
+#sections .article{
+    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#sections .date{
+    color: gray;
+    font-size: 14px;
+}
+#sections .sticker1{
+    position: absolute;
+    margin-top: -25px;
+    margin-right: 20px;
+    z-index: 0;
+}
+#sections .sticker2{
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 47.3%;
+    z-index: 0;
+}
+#backend .titulo{
+    color: #A62422;
+}
+#instructor .titulo{
+    color: #D69D2A;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+/*Pie de pagina*/
+
+footer{
+    height:60px;
+    color: white;
+    background-color: #333333;
+    text-align: center;
+    font-family: "nevis";
+    box-shadow:0px 0px 10px #cccccc inset;
+}
+#footer{
+    padding: 10px;
+}

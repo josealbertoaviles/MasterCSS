@@ -1,0 +1,21 @@
+body{
+    background: peachpuff;
+    background: url(img/patron.jpg);
+    background-attachment: fixed;
+    background-position: left bottom;
+    background-size: 100% 100%;
+}
+
+#caja{
+    border: 5px solid black;
+    background-image: url(img/patron1.png);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+*{
+    color: white;
+}
+#texto{
+    text-align: justify;
+}

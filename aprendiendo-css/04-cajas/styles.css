@@ -1,0 +1,30 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+#cajas{
+    max-width:630px;
+    border: 1px solid black;
+}
+.caja{
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-color: turquoise;
+    border: 1px solid blueviolet;
+    margin: 10px;
+    padding: 20px;
+    float: left;
+}
+p,h2{
+    text-align-last: center;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 235px;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}

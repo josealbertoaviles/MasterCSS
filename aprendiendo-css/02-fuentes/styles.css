@@ -1,0 +1,32 @@
+@font-face{
+    font-family: FuenteCustom;
+    src: url(fonts/Crimson_Text/CrimsonText-SemiBoldItalic.ttf)
+}
+
+h1{
+    font-family:FuenteCustom;    
+    color: seagreen;
+    font-style: oblique;
+    /*Colores*/
+    
+    /*Colores del sistema*/
+    color: olive;
+    
+    /*Colores del hexadecimal*/
+    color:#f7777ba4;
+    
+    /*Colores RGB*/
+   
+    /*Colores RGBA*/
+    color:rgba(37, 189, 156, 0.575);
+    
+}
+h3{
+    font-family: cursive;
+    font-size: 20px;
+    color: olive;
+}
+p{
+    font-family:monospace;
+    font-weight: bold;
+}

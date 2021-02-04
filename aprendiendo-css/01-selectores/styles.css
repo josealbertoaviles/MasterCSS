@@ -1,0 +1,94 @@
+/*
+#######SELECTORES#######
+*/
+/*SELECTOR universal*/
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Selector de etiquetas*/
+
+h1{
+    background: red;
+    color:white;
+    padding: 10px;
+}
+a{
+    font-size: 18px;
+    color: rgb(41, 4, 102);
+    padding: 10px;
+    text-decoration: none;
+}
+footer a{
+    color: yellowgreen;
+    font-size: 20px;
+    background: black;
+}
+
+/*Secectro de id*/
+
+#descripcion{
+    border: 1px solid black;
+    padding: 15px;
+
+}
+#titulo{
+    color: blue;
+    border: 2px dashed white;
+    
+}
+
+/*Selector de clase*/
+
+.parrafo{
+    font-size: 20px;
+    /*text-decoration: underline;*/
+    font-style: italic;
+    font-weight: bold;
+    background: red;
+
+}
+.parrafo1{
+    background: yellow;
+}
+.parrafo2{
+    background: red;
+}
+
+/*Selector de atributo*/
+#usuario form {
+    border: 5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+
+}
+#usuario form *{
+    display: block;
+}
+input[type="text"]{
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 200px;
+}
+input[type="submit"]{
+    background: green;
+    margin-bottom: 15px;
+    padding: 30px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    cursor: pointer;
+}
+/*Selector Hijo*/
+#menu > li >a{
+    color: red;
+}
+/*Prioridad
+cuanto mas especifica sea, mas predomina.
+*/
+#saludo h1{
+    background: brown;
+}
+h1{
+    background: purple !important;
+}
