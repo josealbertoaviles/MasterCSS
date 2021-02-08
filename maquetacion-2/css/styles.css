@@ -60,6 +60,7 @@ body{
     overflow: hidden;
     transition: all 300ms;
     color: white;
+    transition: 300ms;
 }
 #logo .gear{
     display: block;
@@ -68,6 +69,40 @@ body{
     margin-top: 7px;
     margin-left: 25px;
     font-family: "WebSymbolsRegular";
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes rotate-gear{
+    from{
+        transform: rotateZ(0deg);
+
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+#logo:hover .gear{
+    animation: frontBellow 500ms linear;
+}
+@keyframes frontBellow{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+#logo:hover{
+    border-radius: 2px;
+    background: #ccc;
+    color: black;
+    
+
 }
 #logo h3{
     display: block;
@@ -77,6 +112,17 @@ body{
     transition: all 300ms;
     
 }   
+#logo:hover h3{
+    animation: frontRight 500ms linear;
+}
+@keyframes frontRight{
+    from{
+        transform: translateX(300%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
 
 /*Menu*/
 #menu{
@@ -113,7 +159,19 @@ body{
     box-shadow: 0px 0px 2px gray; 
     background: url("../img/bakbaner.png");
     background-position: -200px -200px;
-    padding: 10px;    
+    padding: 10px;
+    animation: backBanner 20s infinite;    
+}
+@keyframes backBanner{
+    0%{
+        background-position: 0px 0px;
+    }
+    50%{
+        background-position: -200px -200px;
+    }
+    100%{
+        background-position: 0px 0px;
+    }
 }
 #banner h1{
     font-family: BebasNeue;
@@ -132,6 +190,7 @@ body{
     
 }
 .card{
+    display: block;
     float: left;
     height: 305px;
     width: 205px;  
@@ -140,25 +199,81 @@ body{
     overflow: hidden;
     margin: 16px;
     text-align: center;
-    transition: 300ms;
+    transition: all 300ms;
+    animation: cardAnimation 300ms linear;
+    color: #005399;
+    overflow: hidden;
 }
-.card .icono{
-    font-size: 50px;
-    margin-top: 37px;
-}
+
 .card .titulo{
     font-size: 20px;
     margin-top: 37px;
-    color: #005399;
 }
+.card:hover .titulo{
+    animation: showTitulo 300ms linear;
+}
+@keyframes showTitulo{
+    from{
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+.card:hover .text{
+    animation: showText 300ms linear;
+}
+@keyframes showText{
+    from{
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}   
 .card .text{
     font-size: 15px;
     margin: 31px 17px 0px 0px;
-    color: #005399;
+
 }
-.card:hover, #gotoblog:hover{
-    box-shadow: 0px 0px 30px #005399 inset;
+#gotoblog:hover{
+    background-color: white;
+    color:#37BCF9;
+    border-radius: 100px;
+    box-shadow: 0px 0px 30px #37BCF9 inset;
+    transform: scale(1.2,1.2); 
+}
+.card:hover{
+    background-color: black;
+    color:white;
+    box-shadow: 0px 0px 30px white inset;
     transform: scale(1.2,1.2);
+}  
+@keyframes showText{
+    from{
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+.card:hover .icono{
+    color: white;
+    font-size: 70px;
+    animation: shoeIcon 300ms linear;
+}
+@keyframes shoeIcon{
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+.card .icono{
+    color: black;
+    font-size: 50px;
+    margin-top: 37px;
 }
 .clearfix{
     float: none;
@@ -226,4 +341,156 @@ body{
     margin-top: 120px;
     margin-left: 938px;
     
+    
 }
+#lateral .box{
+    height: 45px;
+    line-height: 45px;
+    letter-spacing: 3px;
+    font-family: BebasNeue;
+
+    font-size: 22px;
+    background: url(../img/pxgray.png);
+    box-shadow: 3px 3px 3px black;
+    margin-top: 20px;  
+    padding-left: 20px;
+}
+#lateral .input{
+    text-align: center;  
+    height: 30px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+#lateral .input input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.aside-box{
+    width: 85%;
+    height: 240px;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding-top: 2px;
+    background: white;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3),0px 5px 7px white inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset;
+
+}
+#lateral #login a{
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+}
+
+#lateral input[type="text"],
+#lateral input[type="password"]{
+    margin: 10px;
+    width:275px;
+    height: 30px;
+    border-radius: 5px;
+}
+#lateral input[type="submit"]{
+    display: block;
+    float: left;
+    margin: 20px;
+    width:100px;
+    height: 35px;
+    background-color: #37BCF9;
+    color: white;
+    font-size: 15px;  
+}
+
+#social{
+    height: 220px;
+    width: 75%;
+}
+#social a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+/*Footer*/
+#footer {
+    float: left;
+    width: 100%;
+    height: 470px;
+    color: white;
+    background-color: black;
+    overflow: hidden;
+    
+}
+footer .wrap > div{
+    float: left;
+    width: 23%;
+    height: 370px;
+    margin: 40px;
+    text-align: center;
+    color: white;
+    font-family: TrebuchetMS;
+}
+footer a{
+    text-decoration: none;
+    color: #37BCF9;
+    transition: all 300ms;
+
+}
+#footer h5{
+    display: block;
+    background: url('../img/pxgray.png'), white;
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: BebasNeue;
+    font-size: 40px;
+    line-height: 55px;
+    color: #393D3F;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+#footer ul{
+    text-align: left;
+    font-size: 25px;
+
+}
+#footer ul li{
+    color:black;
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #CCCCCC;
+    transform: all 300ms;
+}
+footer ul li a{
+    display: block;
+    height: 40px;
+
+}
+footer iframe{
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 5px solid white;
+    box-shadow: 0px 0px 5px gray;
+}
+#footer img{
+    margin-bottom: 15px;
+
+}
+#footer #browsers img{
+
+    width: 35px;
+}
+footer ul li a:hover{
+
+    transform: scale(1.2,1.2);
+}
+
+
