@@ -303,6 +303,9 @@ body{
     margin-top: 40px; 
     font-family: TrebuchetMS;
 }
+.article{
+    overflow: hidden;
+}
 
 
 .articles .article p{
@@ -338,8 +341,9 @@ body{
 #lateral{
 
     width: 30%;
-    margin-top: 120px;
-    margin-left: 938px;
+    margin-top: 106px;
+    float: right;
+    margin-right: -57px;
     
     
 }
@@ -388,7 +392,7 @@ body{
 #lateral input[type="text"],
 #lateral input[type="password"]{
     margin: 10px;
-    width:275px;
+    width:90%;
     height: 30px;
     border-radius: 5px;
 }
