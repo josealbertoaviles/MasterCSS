@@ -1,0 +1,45 @@
+//VARIABLES
+@bgcolor: lightblue;
+@fuente: arial;
+@b: body;
+
+@{b}{
+    background-color: @bgcolor;
+}
+h1{
+    font-family: @fuente;
+}
+//Anidacion
+
+.informacion{
+    ul{
+        a{
+
+            color: green;
+            font-size: 30px;
+        }
+    }
+    li{
+        color: @bgcolor;
+    }
+}
+//mixins / funciones
+.sombras(){
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    box-shadow: 0px 0px 10px black;
+}
+
+.informacion{
+    .sombras();
+}
+
+//operadores
+
+// mixins condicionales
+
+//Bucles
+
+//Como en el caso de SASS no resultan de gran utiidad puesto que hay que comipar cada vez que se producne cambios
+// y ademas es una propiedad estatica, y no dinámica, ya que no se va actualizando a tiempo real.
