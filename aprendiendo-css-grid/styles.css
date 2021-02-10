@@ -1,0 +1,208 @@
+body{
+    text-align: center;
+    font-family: sans-serif;
+}
+/*----------------------------------EJERCICIO COMPLETO CON AREAS----------------------------------------------*/
+#website-areas{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 20% 10% 60% 10%;
+    grid-template-areas:
+        "cabecera cabecera cabecera cabecera cabecera"
+        "menu menu menu menu menu"
+        "contenido contenido contenido contenido lateral"
+        "pie pie pie pie pie";
+    width: 80%;/*Responsive*/
+    height: 700px;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+    
+}
+#website-areas #cabecera{
+    grid-area: cabecera;
+    margin: 10px;
+    background-color: #ccc;
+    text-align: center;
+    border-radius: 10px;
+    
+
+}
+#website-areas #menu{
+    grid-area: menu;
+    border-radius: 10px;
+    margin: 10px;
+
+}
+#website-areas #menu ul{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 30px;
+    padding-top: none;
+    list-style: none;
+}
+#website-areas #menu ul li{
+    display: block;
+    background: lightblue;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    transition: all 300ms;
+}
+#website-areas #menu ul li:hover{
+    transform: scale(1.2,1.2);
+    background: rgb(5, 88, 88);
+}
+#website-areas #menu ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+#website-areas #contenido{
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 20px;
+}
+#website-areas #contenido article{
+    background: #ccc;
+    margin: 2px;
+    border:1px solid #222;
+}
+#website-areas #lateral{
+    grid-area: lateral;
+    grid-row: 3 / 4;
+    background: purple;
+}
+#website-areas #pie-pagina{
+    grid-area: pie;
+    grid-column: 1 / 6;
+    background:rgb(182, 18, 18);
+}
+/*----------------------------------EJERCICIO COMPLETO----------------------------------------------*/
+#website{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 20% 10% 60% 10%;
+    width: 80%;/*Responsive*/
+    height: 700px;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+    
+}
+#website #cabecera{
+    margin: 10px;
+    background-color: #ccc;
+    text-align: center;
+    border-radius: 10px;
+    grid-column: 1 / 6;
+
+}
+#website #menu{
+    grid-column: 1 / 6;
+    border-radius: 10px;
+    margin: 10px;
+
+}
+#website #menu ul{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 30px;
+    padding-top: none;
+    list-style: none;
+}
+#website #menu ul li{
+    display: block;
+    background: lightblue;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    transition: all 300ms;
+}
+#website #menu ul li:hover{
+    transform: scale(1.2,1.2);
+    background: rgb(5, 88, 88);
+}
+#website #menu ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+#website #contenido{
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 20px;
+}
+#website #contenido article{
+    background: #ccc;
+    margin: 2px;
+    border:1px solid #222;
+}
+#website #lateral{
+    grid-column: 5 / 6;
+    grid-row: 3 / 4;
+    background: purple;
+}
+#website #pie-pagina{
+    grid-column: 1 / 6;
+    background:rgb(182, 18, 18);
+}
+
+
+
+
+
+
+/*----------------------------------EJEMPLOS----------------------------------------------*/
+
+
+.layout{
+    width: 80%;/*Responsive*/
+    height:400px;
+    margin: 0px auto;
+    /*Definir grid*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: calc(16.7% - 10px) calc(50% - 10px) calc(16.7% - 10px) calc(16.7% - 10px);
+    /*Espaciado entre elementos*/
+    grid-gap: 10px;
+    padding: 10px;
+    border: 3px solid orangered;
+}
+.layout .caja{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding: 20px;
+    border: 4px solid #222;
+    background: gray;
+}
+.layout .red{
+    /*
+    grid-column-start: 1;
+    grid-column-end: 3;*/
+    /*Atajo*/
+    grid-column: 1 / 4;
+    background: rgb(255, 51, 51);
+}
+.layout .blue{
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    background: blue;
+}
+.layout .green{
+    background: green;
+    grid-column: 2/4;
+}
+.layout .pink{
+    background: palevioletred;
+}
+.layout .yellow{
+    background: yellow;
+}
+.layout .orange{
+    background: rgb(137, 16, 141);
+    grid-column: 1 / 4;
+}
